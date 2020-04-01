@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
 
   def create
     if @user = login(session_params[:email].downcase, session_params[:password])
-      redirect_to root_path
+      redirect_back_or root_path
     else
       redirect_to new_sessions_path(invalid_session_params: :true)
     end

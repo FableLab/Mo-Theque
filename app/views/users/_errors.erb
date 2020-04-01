@@ -1,7 +1,7 @@
-<% if @user.errors.messages.any? %>
+<% if user.errors.messages.any? %>
   <div class="alert alert-danger">
     <ul>
-    <% @user.errors.messages.each do |field, message| %>
+    <% user.errors.messages.each do |field, message| %>
         <li><%= User.human_attribute_name(field).capitalize %> <%= message.to_sentence %>.</li>
     <% end %>
     </ul>
