@@ -14,6 +14,12 @@ class UsersController < ApplicationController
     end
   end
 
+  def show
+    unless @user = User.find(params[:id])
+      raise ActionController::RoutingError.new('Not Found')
+    end
+  end
+
   private
 
   def user_params

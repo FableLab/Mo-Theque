@@ -1,0 +1,51 @@
+<div class="row justify-content-md-center">
+  <div class="col-sm-8">
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-sm-4">
+            <img src="https://i.pravatar.cc/300" class="img-thumbnail" width="100%">
+          </div>
+          <div class="col-sm-8">
+            <h2 class="card-title mb-0"><%= @user.user_name %></h2>
+            <p class="mt-1 mb-1">Inscrit(e) depuis <%= time_ago_in_words(@user.created_at)  %></p>
+
+            <div class="text-warning">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+
+            <div class="alert alert-secondary mt-4 mb-4" role="alert">
+              <p class="card-text">N'a pas encore redigé de description.</p>
+            </div>
+
+            <div class="mb-2">
+              <button type="button" class="btn btn-danger">
+                Livres répertorié <span class="badge badge-light">60</span>
+                <span class="sr-only">unread messages</span>
+              </button>
+            </div>
+
+            <div class="mb-2">
+              <button type="button" class="btn btn-success">
+                Livres partagé <span class="badge badge-light">40</span>
+                <span class="sr-only">unread messages</span>
+              </button>
+            </div>
+
+            <div class="mb-2">
+              <button type="button" class="btn btn-info">
+                Livres emprunté <span class="badge badge-light">34</span>
+                <span class="sr-only">unread messages</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
